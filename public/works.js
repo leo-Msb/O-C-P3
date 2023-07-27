@@ -1,8 +1,7 @@
 /* Appelle Fetch recupération Images works */
 
 function importWorks() {
-  const promise1 = fetch("/api/works/");
-  // http://localhost:5678/api/works/
+  const promise1 = fetch("http://localhost:5678/api/works/");
 
   promise1
     .then((response) => {
@@ -27,7 +26,7 @@ importWorks();
 
 /*Appelle Fetch pour création de filtres*/
 
-const promise2 = fetch("/api/categories");
+const promise2 = fetch("http://localhost:5678/api/categories");
 
 promise2
   .then((responce2) => {
@@ -50,7 +49,7 @@ promise2
         let nomCategorie = e.target.getAttribute("class");
 
         /* Appelle Fetch pour gestion images */
-        const promise1 = fetch("/api/works");
+        const promise1 = fetch("http://localhost:5678/api/works");
         promise1
           .then((response) => {
             return response.json();
